@@ -2616,19 +2616,16 @@ function resizeGame() {
 window.addEventListener('resize', resizeGame);
 
 /* ==========================================
-   PERFORMANCE SETTINGS
+   MOBILE PERFORMANCE SETTINGS
    ========================================== */
 
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.enabled = false;
 
-renderer.setPixelRatio(
-  Math.min(window.devicePixelRatio || 1, 1.75)
-);
+renderer.setPixelRatio(1);
 
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
+
+renderer.toneMapping = THREE.NoToneMapping;
 
 /* ==========================================
    GAME LOOP
