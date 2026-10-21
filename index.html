@@ -2041,7 +2041,7 @@ function updateJoystick(event) {
   stickNub.style.transform =
     `translate(${dx}px, ${dy}px)`;
 
-  input.x = dx / maximum;
+  input.x = -dx / maximum;
   input.y = -dy / maximum;
 }
 
